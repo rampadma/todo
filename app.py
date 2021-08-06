@@ -7,6 +7,7 @@ app = Chalice(app_name='todo')
 app.register_blueprint(todo)
 app.register_blueprint(user)
 
+
 @app.route('/')
 def index():
     return {'hello': 'world'}
