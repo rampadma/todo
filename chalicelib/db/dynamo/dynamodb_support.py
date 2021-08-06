@@ -81,6 +81,6 @@ def get_all_items(table_name: str, dynamodb=None):
 
 def get_dynamodb_table(table_name: str, dynamodb):
     if not dynamodb:
-        dynamodb = boto3.resource('dynamodb', region_name='us-west-2', endpoint_url=os.getenv('dynamodb_url'))
+        dynamodb = boto3.resource('dynamodb', region_name='us-west-1', endpoint_url=os.getenv('dynamodb_url'))
 
     return dynamodb.Table(table_name)
